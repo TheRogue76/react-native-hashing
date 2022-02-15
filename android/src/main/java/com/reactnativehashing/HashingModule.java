@@ -13,7 +13,7 @@ public class HashingModule extends ReactContextBaseJavaModule {
     static {
         try {
             // Used to load the 'native-lib' library on application startup.
-            System.loadLibrary("cpp");
+            System.loadLibrary("hashing");
         } catch (Exception ignored) {
         }
     }
