@@ -18,6 +18,8 @@ add_library(hashing
             ../cpp/react-native-hashing.h
             ../cpp/sha256.cpp
             ../cpp/sha256.h
+            ../cpp/md5.h
+            ../cpp/md5.cpp
             cpp-adapter.cpp
 )
 target_link_libraries(hashing)
