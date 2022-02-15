@@ -8,6 +8,12 @@ A hashing library for react native written in C++
 npm install react-native-hashing
 ```
 
+or
+
+```sh
+yarn add react-native-hashing
+```
+
 ## Usage
 
 ```js
