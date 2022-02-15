@@ -11,11 +11,11 @@ npm install react-native-hashing
 ## Usage
 
 ```js
-import { multiply } from "react-native-hashing";
+import { sha256 } from "react-native-hashing";
 
 // ...
 
-const result = await multiply(3, 7);
+const result = sha256('Hello world');
 ```
 
 ## Contributing
