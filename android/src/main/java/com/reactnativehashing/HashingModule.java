@@ -19,8 +19,8 @@ public class HashingModule extends ReactContextBaseJavaModule {
     }
     public static final String NAME = "Hashing";
 
-    public static native initialize(long jsiPtr);
-    public static native destruct();
+    public static native void initialize(long jsiPtr);
+    public static native void destruct();
 
     public HashingModule(ReactApplicationContext reactContext) {
         super(reactContext);
