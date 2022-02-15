@@ -10,7 +10,17 @@ import com.facebook.react.module.annotations.ReactModule;
 
 @ReactModule(name = HashingModule.NAME)
 public class HashingModule extends ReactContextBaseJavaModule {
+    static {
+        try {
+            // Used to load the 'native-lib' library on application startup.
+            System.loadLibrary("cpp");
+        } catch (Exception ignored) {
+        }
+    }
     public static final String NAME = "Hashing";
+
+    public static native initialize(long jsiPtr);
+    public static native destruct();
 
     public HashingModule(ReactApplicationContext reactContext) {
         super(reactContext);
@@ -22,20 +32,15 @@ public class HashingModule extends ReactContextBaseJavaModule {
         return NAME;
     }
 
-    static {
-        try {
-            // Used to load the 'native-lib' library on application startup.
-            System.loadLibrary("cpp");
-        } catch (Exception ignored) {
-        }
+    @NonNull
+    @Override
+    public void initialize() {
+      super.initialize();
+      HashingModule.initialize(this.getReactApplicationContext().getJavaScriptContextHolder().get());
     }
 
-    // Example method
-    // See https://reactnative.dev/docs/native-modules-android
-    @ReactMethod
-    public void multiply(int a, int b, Promise promise) {
-        promise.resolve(nativeMultiply(a, b));
+    @Override
+    public void onCatalystInstanceDestroy() {
+      HashingModule.destruct();
     }
-
-    public static native int nativeMultiply(int a, int b);
 }

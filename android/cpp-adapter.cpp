@@ -3,6 +3,12 @@
 
 extern "C"
 JNIEXPORT jint JNICALL
-Java_com_reactnativehashing_HashingModule_nativeMultiply(JNIEnv *env, jclass type, jint a, jint b) {
-    return example::multiply(a, b);
+Java_com_reactnativehashing_HashingModule_initialize(JNIEnv *env, jclass clazz, jlong jsiPtr) {
+    RNHashing::installHashing(*reinterpret_cast<facebook::jsi::Runtime *>(jsiPtr));
+}
+
+extern "C"
+JNIEXPORT jint JNICALL
+Java_com_reactnativehashing_HashingModule_destruct(JNIEnv *env, jclass clazz) {
+    RNHashing::cleanUpHashing();
 }
