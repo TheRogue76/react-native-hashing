@@ -11,6 +11,8 @@
 
 @implementation Hashing
 
+@synthesize bridge = _bridge;
+
 RCT_EXPORT_MODULE();
 
 + (BOOL)requiresMainQueueSetup {
@@ -26,7 +28,11 @@ RCT_EXPORT_MODULE();
     if (!cxxBridge.runtime) {
         return;
     }
-    installSequel(*(facebook::jsi::Runtime *)cxxBridge.runtime)
+    RNHashing::installHashing(*(facebook::jsi::Runtime *)cxxBridge.runtime);
+}
+
+- (void)invalidate {
+    RNHashing::cleanUpHashing();
 }
 
 @end

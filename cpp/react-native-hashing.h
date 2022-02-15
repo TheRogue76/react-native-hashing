@@ -1,8 +1,13 @@
-#ifndef EXAMPLE_H
-#define EXAMPLE_H
+#ifndef react_native_hashing_h
+#define react_native_hashing_h
 
-namespace example {
-  int multiply(float a, float b);
+#include <jsi/jsilib.h>
+#include <jsi/jsi.h>
+
+
+namespace RNHashing {
+    void installHashing(facebook::jsi::Runtime &rt);
+    void cleanUpHashing();
 }
 
-#endif /* EXAMPLE_H */
+#endif /* react_native_hashing_h */
