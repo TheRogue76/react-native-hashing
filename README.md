@@ -8,15 +8,29 @@ A hashing library for react native written in C++
 npm install react-native-hashing
 ```
 
+or
+
+```sh
+yarn add react-native-hashing
+```
+
 ## Usage
 
 ```js
-import { sha256 } from "react-native-hashing";
+import { sha256, md5 } from "react-native-hashing";
 
 // ...
 
 const result = sha256('Hello world');
+
+or
+
+const result = md5('Hello world');
 ```
+
+## Acknowledgements
+
+Big thanks to Stephan Brumme for the C++ implementation of the hashing algorithms. [Link to his library](https://github.com/stbrumme/hash-library)
 
 ## Contributing
 
