@@ -16,8 +16,10 @@ add_library(hashing
             "${NODE_MODULES_DIR}/react-native/ReactCommon/jsi/jsi/jsi.cpp"
             ../cpp/react-native-hashing.cpp
             ../cpp/react-native-hashing.h
-            ../cpp/hash-library/*.cpp
-            ../cpp/hash-library/*.h
+            ../cpp/hash-library/md5.cpp
+            ../cpp/hash-library/md5.h
+            ../cpp/hash-library/sha256.cpp
+            ../cpp/hash-library/sha256.h
             cpp-adapter.cpp
 )
 target_link_libraries(hashing)
