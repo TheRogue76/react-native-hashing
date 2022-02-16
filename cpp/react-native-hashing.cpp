@@ -1,6 +1,4 @@
 #include "react-native-hashing.h"
-#include "sha256.h"
-#include "md5.h"
 
 using namespace facebook;
 using namespace std;
@@ -20,8 +18,7 @@ namespace RNHashing {
                 return jsi::Value::undefined();
             }
             string input = args[0].asString(rt).utf8(rt);
-            SHA256 converter;
-            return jsi::Value(rt, jsi::String::createFromUtf8(rt, converter(input)));
+            return jsi::Value(rt, jsi::String::createFromUtf8(rt, shaConvertor(input)));
         }
                         );
         auto md5 = jsi::Function::createFromHostFunction(rt,
@@ -37,8 +34,7 @@ namespace RNHashing {
                 return jsi::Value::undefined();
             }
             string input = args[0].asString(rt).utf8(rt);
-            MD5 converter;
-            return jsi::Value(rt, jsi::String::createFromUtf8(rt, converter(input)));
+            return jsi::Value(rt, jsi::String::createFromUtf8(rt, md5Convertor(input)));
         }
                                                          );
         jsi::Object module = jsi::Object(rt);

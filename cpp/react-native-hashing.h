@@ -3,9 +3,13 @@
 
 #include <jsi/jsilib.h>
 #include <jsi/jsi.h>
+#include "hash-library/sha256.h"
+#include "hash-library/md5.h"
 
 
 namespace RNHashing {
+    SHA256 shaConvertor;
+    MD5 md5Convertor;
     void installHashing(facebook::jsi::Runtime &rt);
     void cleanUpHashing();
 }
