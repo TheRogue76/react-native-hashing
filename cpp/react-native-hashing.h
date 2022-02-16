@@ -8,8 +8,8 @@
 
 
 namespace RNHashing {
-    SHA256 shaConvertor;
-    MD5 md5Convertor;
+    static SHA256 shaConvertor;
+    static MD5 md5Convertor;
     void installHashing(facebook::jsi::Runtime &rt);
     void cleanUpHashing();
 }
