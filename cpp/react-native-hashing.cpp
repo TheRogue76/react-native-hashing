@@ -13,11 +13,11 @@ namespace RNHashing {
                                                             [](jsi::Runtime &rt, const jsi::Value &thisValue, const jsi::Value *args, size_t count) -> jsi::Value {
             if (count == 0 || count > 1) {
                 jsi::detail::throwJSError(rt, "sha256 requires one arguement");
-                return {};
+                return jsi::Value::undefined();
             }
             if (!args[0].isString()) {
                 jsi::detail::throwJSError(rt, "arguement for sha256 needs to be of type string");
-                return {};
+                return jsi::Value::undefined();
             }
             string input = args[0].asString(rt).utf8(rt);
             SHA256 converter;
@@ -30,11 +30,11 @@ namespace RNHashing {
                                                          [](jsi::Runtime &rt, const jsi::Value &thisValue, const jsi::Value *args, size_t count) -> jsi::Value {
             if (count == 0 || count > 1) {
                 jsi::detail::throwJSError(rt, "md5 requires one arguement");
-                return {};
+                return jsi::Value::undefined();
             }
             if (!args[0].isString()) {
                 jsi::detail::throwJSError(rt, "arguement for md5 needs to be of type string");
-                return {};
+                return jsi::Value::undefined();
             }
             string input = args[0].asString(rt).utf8(rt);
             MD5 converter;
