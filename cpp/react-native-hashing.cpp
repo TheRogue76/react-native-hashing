@@ -46,7 +46,7 @@ namespace RNHashing {
     
     void installHashing(jsi::Runtime &rt) {
         jsi::Object module = jsi::Object(rt);
-        for (int i = sha256; i != sha3; i++) {
+        for (int i = sha256; i <= sha3; i++) {
             auto hashFunction = jsi::Function::createFromHostFunction(rt,
                                                                       jsi::PropNameID::forAscii(rt, nameFromType(HashTypes(i))),
                                                                       1,

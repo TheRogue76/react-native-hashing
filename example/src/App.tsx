@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import { sha256, md5 } from 'react-native-hashing';
+import { sha256, md5, sha1, sha3 } from 'react-native-hashing';
 
 export default function App() {
   return (
@@ -9,6 +9,8 @@ export default function App() {
       <Text>our text is: hello world</Text>
       <Text>sha256: {sha256('hello world')}</Text>
       <Text>md5: {md5('hello world')}</Text>
+      <Text>sha1: {sha1('hello world')}</Text>
+      <Text>sha3: {sha3('hello world')}</Text>
     </View>
   );
 }
