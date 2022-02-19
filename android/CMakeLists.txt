@@ -20,6 +20,10 @@ add_library(hashing
             ../cpp/hash-library/md5.h
             ../cpp/hash-library/sha256.cpp
             ../cpp/hash-library/sha256.h
+            ../cpp/hash-library/sha1.cpp
+            ../cpp/hash-library/sha1.h
+            ../cpp/hash-library/sha3.cpp
+            ../cpp/hash-library/sha3.h
             cpp-adapter.cpp
 )
 target_link_libraries(hashing)

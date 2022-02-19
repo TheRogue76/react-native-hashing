@@ -1,4 +1,4 @@
-<h1 align="center">React Native Hashing</h2>
+<h1 align='center'>React Native Hashing</h1>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/react-native-hashing"><img src="https://img.shields.io/npm/dm/react-native-hashing.svg?style=flat-square" alt="NPM downloads"></a>
@@ -6,7 +6,7 @@
   <a href="/LICENSE"><img src="https://img.shields.io/npm/l/react-native-hashing.svg?style=flat-square" alt="License"></a>
 </p>
 
-A hashing library for react native written in C++
+A hashing library for react native written in C++ and JSI
 
 ## Installation
 
@@ -23,7 +23,7 @@ yarn add react-native-hashing
 ## Usage
 
 ```js
-import { sha256, md5 } from "react-native-hashing";
+import { sha256, md5, sha1, sha3 } from "react-native-hashing";
 
 // ...
 
@@ -32,6 +32,14 @@ const result = sha256('Hello world');
 or
 
 const result = md5('Hello world');
+
+or
+
+const result = sha1('Hello world');
+
+or
+
+const result = sha3('Hello world');
 ```
 
 ## Acknowledgements
