@@ -1,6 +1,6 @@
 {
   "name": "react-native-hashing",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A hashing library for react native written in C++ and JSI",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
