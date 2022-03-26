@@ -1,7 +1,7 @@
 {
   "name": "react-native-hashing",
   "version": "0.1.4",
-  "description": "A hashing library for react native written in C++",
+  "description": "A hashing library for react native written in C++ and JSI",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
@@ -34,10 +34,34 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "hashing",
+    "jsi",
+    "cpp"
   ],
   "repository": "https://github.com/TheRogue76/react-native-hashing",
-  "author": "Parsa Nasirimehr <p.nasirimehr@gmail.com> (https://github.com/TheRogue76)",
+  "contributors": [
+    {
+      "name": "Matin Zade Dolatabad",
+      "email": "",
+      "url": ""
+    },
+    {
+      "name": "Stas Shakirov",
+      "email": "",
+      "url": ""
+    },
+    {
+      "name": "Erfan Momeni",
+      "email": "erfanmo98@gmail.com",
+      "url": "https://erfanmomeni.netlify.app/"
+    },
+    {
+      "name": "Parsa Nasirimehr",
+      "email": "p.nasirimehr@gmail.com",
+      "url": "https://parsanasirimehr.netlify.app/"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/TheRogue76/react-native-hashing/issues"
