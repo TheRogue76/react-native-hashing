@@ -22,6 +22,12 @@ or
 yarn add react-native-hashing
 ```
 
+## iOS linking:
+```bash
+cd ios
+pod install
+```
+
 ## Usage
 
 ```js
